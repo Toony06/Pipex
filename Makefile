@@ -6,11 +6,11 @@
 #    By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 11:34:23 by toroman           #+#    #+#              #
-#    Updated: 2025/04/03 11:45:55 by toroman          ###   ########.fr        #
+#    Updated: 2025/04/17 17:53:07 by toroman          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 
+SRCS = parsing.c main.c 
 OBJS = ${SRCS:.c=.o}
 NAME = pipex
 CC = gcc
