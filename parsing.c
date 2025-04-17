@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:46:18 by toroman           #+#    #+#             */
-/*   Updated: 2025/04/17 16:10:54 by toroman          ###   ########.fr       */
+/*   Updated: 2025/04/17 18:57:08 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,18 @@ void parsing(char **argv)
 	close(fd_in);
 	close(fd_out);
 
+}
+
+char	*get_path(char *str, char **env)
+{
+	int	i;
+
+	i = 0;
+	while (env[i])
+	{
+		if (ft_strcnmp(env[i], str, ft_strlen(str) == 0))
+			return (env[i] + 5);
+		i++;
+	}
+	return (NULL);
 }

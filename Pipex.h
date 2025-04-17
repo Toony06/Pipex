@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:38:27 by toroman           #+#    #+#             */
-/*   Updated: 2025/04/17 17:50:58 by toroman          ###   ########.fr       */
+/*   Updated: 2025/04/17 18:58:59 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@
 # include <unistd.h>
 
 void parsing(char **argv);
+char	*get_path(char *str, char **env);
 #endif
