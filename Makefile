@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+         #
+#    By: tony <tony@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 11:34:23 by toroman           #+#    #+#              #
-#    Updated: 2025/04/17 17:53:07 by toroman          ###   ########.fr        #
+#    Updated: 2025/04/19 18:04:17 by tony             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g3
 RM = rm -rf
 LIBFT = ./utils
-INCLUDES = -I/usr/include -Imlx -Iincludes
+
 
 # Couleurs ANSI
 RED = \033[1;31m
