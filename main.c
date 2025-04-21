@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:11:56 by toroman           #+#    #+#             */
-/*   Updated: 2025/04/19 18:08:32 by tony             ###   ########.fr       */
+/*   Updated: 2025/04/21 14:21:50 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,6 @@ void	init_struct(t_pipe *pipe)
 {
 	pipe->path_cmd = NULL;
 	pipe->path_cmd1 = NULL;
+	pipe->args_cmd = NULL;
+	pipe->args_cmd1 = NULL;
 }

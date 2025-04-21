@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tony <tony@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 13:08:11 by tony              #+#    #+#             */
-/*   Updated: 2025/04/20 13:08:44 by tony             ###   ########.fr       */
+/*   Updated: 2025/04/21 14:20:55 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int check_acces(char **argv)
 
 	if (access(argv[1], R_OK) == -1)
 	{
-		ft_putstr_fd("error read its impossible", 2);
+		ft_putstr_fd("error read its impossible\n", 2);
+		exit(EXIT_FAILURE);
 		return(0);
 	}
 	if (access(argv[4], W_OK) == -1)
@@ -43,7 +44,7 @@ char	*get_path(char *str, char **env)
 	i = 0;
 	while (env[i])
 	{
-		if (ft_strcnmp(env[i], str, ft_strlen(str) == 0))
+		if (ft_strncmp(env[i], str, ft_strlen(str) == 0))
 			return (env[i] + 5);
 		i++;
 	}
@@ -58,7 +59,7 @@ char	*find_cmd(char *cmd, char **env, t_pipe *pipe)
 	int		i;
 
 	pipe->path = get_path("PATH=", env);
-	path_split = ft_split(pipe->path, ":");
+	path_split = ft_split(pipe->path, ':');
 	if (!path_split)
 		return (NULL);
 	i = 0;
@@ -94,11 +95,11 @@ void	ft_free(char **str)
 
 void	parsing(char **argv, char **env, t_pipe *pipe)
 {
-	char	*cmd;
-	char	*cmd1;
+	char	**cmd;
+	char	**cmd1;
 
-	cmd = ft_split(argv[2], " ");
-	cmd1 = ft_split(argv[3], " ");
+	cmd = ft_split(argv[2], ' ');
+	cmd1 = ft_split(argv[3], ' ');
 	pipe->path_cmd = find_cmd(cmd[0], env, pipe);
 	pipe->path_cmd1 = find_cmd(cmd1[0], env, pipe);
 
@@ -115,4 +116,6 @@ void	parsing(char **argv, char **env, t_pipe *pipe)
 	}
 	ft_free(cmd);
 	ft_free(cmd1);
+	pipe->args_cmd = handle_args2(argv, pipe);
+	pipe->args_cmd1 = handle_args3(argv, pipe);
 }
