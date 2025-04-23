@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tony <tony@student.42.fr>                  +#+  +:+       +#+         #
+#    By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/10 11:34:23 by toroman           #+#    #+#              #
-#    Updated: 2025/04/19 18:04:17 by tony             ###   ########.fr        #
+#    Updated: 2025/04/23 14:15:52 by toroman          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = parsing.c main.c 
+SRCS = parsing.c main.c pipex1.c 
 OBJS = ${SRCS:.c=.o}
 NAME = pipex
 CC = gcc

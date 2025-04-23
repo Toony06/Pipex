@@ -6,7 +6,7 @@
 /*   By: toroman <toroman@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 13:08:11 by tony              #+#    #+#             */
-/*   Updated: 2025/04/21 14:20:55 by toroman          ###   ########.fr       */
+/*   Updated: 2025/04/23 14:21:33 by toroman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,4 +118,5 @@ void	parsing(char **argv, char **env, t_pipe *pipe)
 	ft_free(cmd1);
 	pipe->args_cmd = handle_args2(argv, pipe);
 	pipe->args_cmd1 = handle_args3(argv, pipe);
+	cmd_exec(argv, pipe, env);
 }
